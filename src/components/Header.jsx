@@ -10,8 +10,10 @@ import { NavLink } from '@/components/NavLink'
 
 function MobileNavLink({ href, children }) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
-      {children}
+    <Popover.Button as={"div"}  className="block w-full p-2">
+      <Link href={href}>
+        {children}
+      </Link>
     </Popover.Button>
   )
 }
@@ -95,7 +97,7 @@ export function Header({ className, ...props }) {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
+            <Link href="/" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
